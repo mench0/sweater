@@ -7,10 +7,14 @@ import javax.persistence.*;
 import java.util.Collection;
 import java.util.Set;
 
+/**
+ * Class database entity
+ */
 @Entity
 @Table(name = "usr")
 public class User implements UserDetails
 {
+    // поля в таблице usr
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -18,13 +22,11 @@ public class User implements UserDetails
     private String password;
     private boolean active;
 
+    // хранилище ролей в таблице user_role
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
-
-
-
 
     public Long getId() {
         return id;

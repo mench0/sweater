@@ -15,6 +15,7 @@ public class Message {
     @JoinColumn(name = "user_id")
     private User author;
 
+    // создал пустой конструктор, иначе спринг не сможет создать данный класс
     public Message() {
     }
 
