@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 /**
-   Interface for CRUD database
+   Interface for CRUD a table message
  */
 public interface MessageRepo extends CrudRepository<Message, Long> {
 

@@ -8,8 +8,8 @@
     </div>
     <div>
         <form method="post">
-            <input type="text" name="text" placeholder="Введите сообщение" />
-            <input type="text" name="tag" placeholder="Тэг">
+            <input type="text" name="name" placeholder="Имя" />
+            <input type="text" name="secondname" placeholder="Фамилия">
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit">Добавить</button>
         </form>

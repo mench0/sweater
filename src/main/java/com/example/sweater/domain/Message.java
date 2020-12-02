@@ -11,7 +11,7 @@ public class Message {
     private String text;
     private String tag;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER) // одному пользовтелю соответствует много сообщении
     @JoinColumn(name = "user_id")
     private User author;
 

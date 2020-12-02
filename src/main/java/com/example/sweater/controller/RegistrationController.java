@@ -34,8 +34,8 @@ public class RegistrationController {
         }
 
         user.setActive(true);
-        user.setRoles(Collections.singleton(Role.USER));
-        userRepo.save(user);
+        user.setRoles(Collections.singleton(Role.USER)); // создание с единственным значением
+        userRepo.save(user); // сохранение
 
         return "redirect:/login";
     }
